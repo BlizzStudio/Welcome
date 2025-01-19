@@ -5,31 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lampy-Luma</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="bg-gray-900 text-white flex items-center justify-center h-screen">
     <div class="text-center space-y-6">
         <!-- Logo -->
         <div class="rounded-full w-24 h-24 mx-auto flex items-center justify-center shadow-lg overflow-hidden">
-            <img src="https://i.ibb.co/Pm7nbrD/Leonardo-Phoenix-10-A-simple-and-professional-logo-for-an-AI-a-1-1.jpg" alt="Leonardo-Phoenix-10-A-simple-and-professional-logo-for-an-AI-a-1-1" border="0"" alt="Logo" class="w-full h-full object-cover">
+            <img src="https://i.ibb.co/Pm7nbrD/Leonardo-Phoenix-10-A-simple-and-professional-logo-for-an-AI-a-1-1.jpg" alt="Logo" class="w-full h-full object-cover">
         </div>
 
-       
         <h1 class="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-600">
             Welcome to Lampy AI by Luma
         </h1>
 
-       
         <p class="text-lg md:text-xl text-gray-400 max-w-lg mx-auto">
            Luma: Illuminating the future with innovative AI solutions that empower and inspire.
         </p>
 
-     
         <div class="space-x-4">
             <a href="https://lampy.vercel.app" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg">Go to Website</a>
-            <a href=""><button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg">
-                Surprise
-                                                                                                                                         </button></a>
+            <a href="#"><button id="surprise-button" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg">Surprise</button></a>
         </div>
     </div>
+
+    <script>
+        // Show SweetAlert2 modal when the page loads
+        window.addEventListener('load', () => {
+            Swal.fire({
+                title: 'Welcome!',
+                text: 'Please click on the "Surprise" button to discover something exciting!',
+                icon: 'info',
+                confirmButtonText: 'Got it!',
+                confirmButtonColor: '#6366f1'
+            });
+        });
+
+        // Optional: Add functionality to the "Surprise" button
+        document.getElementById('surprise-button').addEventListener('click', () => {
+            Swal.fire({
+                title: 'Surprise! 🎉',
+                text: 'You clicked the button! Great things are coming your way!',
+                icon: 'success',
+                confirmButtonText: 'Awesome!',
+                confirmButtonColor: '#22c55e'
+            });
+        });
+    </script>
 </body>
 </html>
